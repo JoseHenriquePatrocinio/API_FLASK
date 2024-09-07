@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "ff55360f-7de7-4615-9422-48bf8015e2b6",
+		"name": "APIFLASK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29666214"
+	},
+	"item": [
+		{
+			"name": "getusers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/users",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createuser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Zé\",\r\n    \"email\":\"zepatrocinio@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/users",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateuser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Zé zezinho\",\r\n    \"email\":\"zepatrocinio@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/users/4",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"users",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteuser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Zé zezinho\",\r\n    \"email\":\"zepatrocinio@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/users/3",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"users",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "http://127.0.0.1:5000",
+			"type": "string"
+		}
+	]
+}
